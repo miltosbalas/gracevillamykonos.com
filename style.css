@@ -113,6 +113,10 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;color:var(--navy-dark);}
   position:relative;padding-bottom:4px;transition:.3s;
   white-space:nowrap;
 }
+.nav-link::after{
+  content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--beige);
+  transition:.3s;
+}
 .nav-link:hover::after,.nav-link.active::after{width:100%;}
 .navbar.scrolled .nav-link{color:var(--navy-dark);}
 

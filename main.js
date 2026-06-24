@@ -17,12 +17,15 @@ const CONTACT_PHONE = "+306989787742";
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- PRELOADER ---------- */
-  const preloader = document.getElementById('preloader');
+const preloader = document.getElementById('preloader');
+if (document.readyState === 'complete') {
+  setTimeout(() => preloader.classList.add('hide'), 400);
+} else {
   window.addEventListener('load', () => {
     setTimeout(() => preloader.classList.add('hide'), 400);
   });
-  // fallback in case load event already fired
-  setTimeout(() => preloader.classList.add('hide'), 2500);
+}
+setTimeout(() => preloader.classList.add('hide'), 1800);
 
   /* ---------- CUSTOM CURSOR ---------- */
   const cursor = document.getElementById('cursorDot');
